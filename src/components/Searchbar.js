@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import { useHistory } from 'react-router-dom'
+import React from 'react'
 
 import './Searchbar.css'
 
@@ -23,8 +24,9 @@ export default function Searchbar() {
                 <input
                     type="text"
                     id="search"
-                    onChange={(e) => setTerm(e.target.value}
+                    onChange={(e) => setTerm(e.target.value)}
                     required
+                    
                 />
 
             </form>

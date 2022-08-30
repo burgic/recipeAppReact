@@ -2,7 +2,7 @@ import './Search.css';
 import { useLocation } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
 import RecipeList from '../../components/RecipeList';
-import RecipeList from '../../components/RecipeList';
+import React from 'react';
 
 export default function Search(){
 
@@ -13,9 +13,6 @@ export default function Search(){
     const url = 'http://localhost:3000/recipes?q=' + query
     const {error, isPending, data} = useFetch(url)
 
-    if (recipes.length === 0) {
-        return <div className="error">No recipes to load...</div>
-    }
 
     return (
         <div className="Search">
